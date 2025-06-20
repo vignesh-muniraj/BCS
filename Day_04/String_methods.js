@@ -39,7 +39,8 @@ if (
   stockname == stock3 ||
   stockname == stock4
 ) {
-  console.log(`Yes, we have ${stockname}🍦 in stock`);
+  console.log(`Yes, we have ${stockname}🍦 in stock in stores`);
 } else {
   console.log(`We ran out of ${stockname}`);
 }
+ console.log()
