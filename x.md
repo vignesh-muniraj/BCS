@@ -1,3 +1,4 @@
+
 # Day 1 - Intro
 ## intro to browser
 
@@ -135,4 +136,49 @@ every website runs on 443 port
    - toUpperCase()
    - trim()
    - padstart(),padend()
-   - length
+   ## property
+   - length 
+
+
+
+   ## undefined vs defined 
+   - var x; is an undefined ,declared but not assinged any value.(undefined)
+   - console.log(y) ,is not decalred so defined.(defined)
+
+
+ ## Array
+ - Group of same data types.
+
+  ## Object
+ - group of different data types.
+- key - value pairs.
+
+
+
+### Day 05
+  # Array
+  - index & values.
+  # object
+  - key & value
+
+
+
+## ES6
+- Numeric_seperators
+
+## types of declartions
+- var ,let ,const
+
+- var
+ - we can redeclare a same varible name.
+-  var name =  "app";
+-  var name =  "app";
+
+
+- let
+ - cannot redeclare a same variable name.
+     let name = "app";
+     let name = "app"; (error)
+- const
+  - cannot reassign and Redeclare.
+  
