@@ -15,3 +15,14 @@ const student = {
 student.name = "Muthu";
 student["personal hobbies"].push("VolleyBall");
 console.log(student);
+
+// Spread
+
+const r1 = [100, 400];
+const r2 = [700, 900];
+const r3 = [...r1, ...r2];
+console.log(r3);
+
+
+
+const name = prompt("Enter a name");

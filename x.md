@@ -164,6 +164,7 @@ every website runs on 443 port
 
 
 ## ES6
+
 - Numeric_seperators
 
 ## types of declartions
@@ -182,3 +183,17 @@ every website runs on 443 port
 - const
   - cannot reassign and Redeclare.
   
+
+
+  ### ..spread operator
+     - const x = [100,23,45];
+     -const y=[...x] // copy by value
+ 
+
+ ## Array destructuring
+   - const [t1, t2] = [100,200];
+   - const [t1, t2=80] = [100,200,300]; when t2 is undefined then it takes default value
+   - const [t1, t2] = [100,200];
+
+
+   ## object destructuring
