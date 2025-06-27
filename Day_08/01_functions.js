@@ -40,5 +40,31 @@ function sayHello(){
         console.log("Hello!");
     }
 }
-  console.log() ;
+  var a=sayHello();
+  a();
+  sayHello()();
+// console.log(sayHello)
     
+// if function can be treated as a value.
+// function -> value.
+// function -> first class
+// 1.value can be passsed as arg.
+// 2.value can be returned.
+// 3.value can be assigned.
+
+
+//Currying (functional programming)
+//1.currying
+// partial Application
+//3.Point-free style
+
+//F#,Haskell,scala,lisp,Small
+const sayHello1 = () => () => "Hello3";
+
+const add = (x) => (y) => x + y;
+console.log(add(4)(5));
+
+
+
+
+
