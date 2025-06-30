@@ -207,4 +207,14 @@ every website runs on 443 port
    ## 
 
   
-        
+  ## compose and pipe  
+
+
+
+      ## Day 09
+      ### methods
+      - push vs unshift.
+      - some(||) vs every(&&)
+      - every -- arr.every((n)=> if(n>15){
+        consloe.og("cool");
+      })

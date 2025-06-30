@@ -44,7 +44,6 @@ function sayHello(){
   a();
   sayHello()();
 // console.log(sayHello)
-    
 // if function can be treated as a value.
 // function -> value.
 // function -> first class
