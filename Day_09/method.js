@@ -118,7 +118,18 @@ const genreFiction = (books) =>{
    return  books
    .filter((book) =>  book.genre == "Fiction")
    .map((book) => book.title );
-    // return   fictionMovies.map((fic) => fic.title );
-
 }
 console.log(genreFiction(books));
+var n = 25;
+console.log(n/3);
+
+// console.log("Hello");
+// const numbers1 = [1, 2, 3, 4, 5];
+
+// // ===== YOUR CODE BELOW =====
+// // Use reduce to sum all numbers
+// const sumNumbers = numbers1 => numbers1.map((num) => num += num ) ;
+  
+
+
+// console.log(sumNumbers(numbers1));
