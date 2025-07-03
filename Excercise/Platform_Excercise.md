@@ -161,6 +161,7 @@ console.log(getMovieDetails(movies, 6));
 Baahubali is an Action movie
 Jersey is a Sports movie
 Movie not found
+
 # Exercise 21
 Write a function that checks if all movies of a certain genre have ratings above a certain value using array methods.
 ### Answer
@@ -183,11 +184,48 @@ console.log(allRatingsAboveForGenre(movies, 8, "Biography"));
 # Expected Output
 Yes, all Action movies are above 7 ratings
 No, not all Biography movies are above 8 ratings
-# Exercise
+# Exercise 22
+Write a function that returns a string with each movie's title and its ratings joined by commas using array methods.
 ### Answer
 ```js
+const movies = [
+  {
+    id: 1,
+    title: "Baahubali",
+    director: "S. S. Rajamouli",
+    year: 2015,
+    ratings: [8, 9, 10],
+    genre: "Action",
+  },
+  {
+    id: 2,
+    title: "Arjun Reddy",
+    director: "Sandeep Reddy Vanga",
+    year: 2017,
+    ratings: [9, 8, 9],
+    genre: "Drama",
+  },
+  {
+    id: 3,
+    title: "Mahanati",
+    director: "Nag Ashwin",
+    year: 2018,
+    ratings: [10, 9, 8],
+    genre: "Biography",
+  },
+];
+
+
+const getTitlesAndRatings = (movies) => {
+  return movies
+    .map((movie) => movie.title +": "+ movie.ratings.join(", ")).join(" | ");
+  
+};
+
+console.log(getTitlesAndRatings(movies));
 ```
 # Expected Output
+Baahubali: 8, 9, 10 | Arjun Reddy: 9, 8, 9 | Mahanati: 10, 9, 8
 # Exercise
 ### Answer
 ```js
