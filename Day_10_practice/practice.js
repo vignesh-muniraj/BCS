@@ -13,7 +13,7 @@ const movies = [
     director: "S. S. Rajamouli",
     year: 2015,
     ratings: [8, 9, 11],
-    genre: "Action",
+    genre: "Action2",
   },
   {
     id: 2,
@@ -61,24 +61,17 @@ const movies = [
 // else{
 //     return `No, not all ${genre} movies are above ${rating} ratings`;
 
+
 // }
 // };
 const allRatingsAboveForGenre = (movies, thresholdRating, genre) => {
   const filteredMovies = movies.filter((movie) => movie.genre == genre);
   const movieRatings = filteredMovies
-    .map((movieName) => movieName.ratings)
-    .flat();
+  .map((movieName) => movieName.ratings)
+  .flat();
   console.log(movieRatings);
   const result = movieRatings.every((rating) => rating > thresholdRating);
-  // if (result) {
-  //   return `Yes, all ${genre} movies are above ${thresholdRating} ratings`;
-  // } else {
-  //   return `No, not all ${genre} movies are above ${thresholdRating} ratings`;
-  // }
-  var display=  `${genre} movies are above ${thresholdRating} ratings`;
-  return result
-    ? "Yes, all " + display    
-    : "No, not " + display   
+  return `${(result ? `Yes, all`  : `No, not`)} ${genre} movies are above ${thresholdRating} ratings`;
 };
 console.log(allRatingsAboveForGenre(movies, 7, "Action"));
 console.log(allRatingsAboveForGenre(movies, 8, "Biography"));
