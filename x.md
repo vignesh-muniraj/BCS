@@ -250,7 +250,6 @@ every website runs on 443 port
   - Color pelete.
   - Adding only 2 points.
 
-
   ### conbon board
   # SCRUM (Agile)
   - sprint - 14 days.
@@ -269,3 +268,35 @@ every website runs on 443 port
  - -ve & 0 -> same 
  - a-b (ass)
  - b-a (des)
+
+ ## predicates
+
+ ## find()
+ - returns the first finded element;
+
+#### Day 12 
+# Text styling - ii
+  - text-transform
+  - text-align
+  - text-decoration
+  - letter spacing
+  - line height
+
+
+  # sans serif
+  - fun ,trend
+  - new
+
+  # serif
+  - series guys
+  - trusted
+  - traditional
+  ## Box model
+  - conten
+  - padding
+  - border
+  - padding
+   
+
+# defalut padding
+- list
