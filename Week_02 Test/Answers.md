@@ -15,8 +15,7 @@ const moreOrders = [
 ];
 ```
 
-### Questions
-
+### Question 1
 1. 🍽️ Filter and Join Dish Names
 
    Write a function that filters out dishes with ratings below 4, then returns a string of dish names separated by commas.
@@ -47,8 +46,8 @@ console.log(getFirstNDishNames(orders, 3));
    # Expected output
    "Burger, Pizza, Sushi"
 
-
-3. 🍲 Merge Orders with Default Values
+# Question 3
+ 🍲 Merge Orders with Default Values
 
    Write a function that merges two arrays of food orders
 
@@ -82,6 +81,7 @@ console.log(mergeOrders(orders,[12,46])); // Should print the original array of 
  console.log(getDishNamesByIds(orders, 5, 1));
  Sushi, Burger
 
+# Question 5
 5. 🍜 List Dish Names and Categories
 
    Write a function that accepts any number of food orders and returns a formatted string listing their dish names and categories using the rest operator, nullish coalescing, and template literals.
