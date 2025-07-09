@@ -303,3 +303,15 @@ every website runs on 443 port
 
 # Day 13
 - css - casecading - overriding
+# Day_14
+ # 
+- child selector. div>p
+- Descendant Selector. div p
+- General Sibiling Selector. h1~p (h1 sister,brother)(after h1,only Younger sibilings)
+- Adjacent Sibling. p+p (near p), h1+p (near h1)
+
+# ---
+# imperative 
+- How to do. (children)
+# Declarative
+- what to do.
