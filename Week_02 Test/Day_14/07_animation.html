@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-content: center;
+      }
+
+      .box {
+        height: 200px;
+        /* width: 400px; */
+        /* aspect-ratio: 16 / 9; */
+        /* aspect-ratio: 4 / 3; */
+        /* aspect-ratio: 21 / 9; */
+        aspect-ratio: 1 / 1;
+       
+        background: crimson;
+        transition: 2s all;
+      }
+
+      /* Pseudo class selector  - Mouse over*/
+      .box:hover {
+        background: orange;
+        transform: scale(1) rotate(360deg);
+        border-bottom-left-radius: 60px;
+        border-top-right-radius: 60px;
+         background: orange;
+         background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+        /* transform: scale(1.1) translateY(-30px); */
+      }
+
+      /* Mouse click */
+      .box:active {
+        background: teal;
+        transform: scale(0.1);
+         border-top-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+      }
+      img{
+       clip-path: polygon(45% 32%, 46% 33%, 46% 33%, 46% 33%, 69% 50%, 70% 50%, 70% 50%, 69% 49%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    filter: grayscale(100%) ;
+    }
+      img:hover{
+        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+        filter: grayscale(0%) ;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <img src="vijay.jpg" alt="">
+  </body>
+</html>
