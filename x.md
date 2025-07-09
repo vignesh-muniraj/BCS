@@ -300,3 +300,6 @@ every website runs on 443 port
 
 # defalut padding
 - list
+
+# Day 13
+- css - casecading - overriding
