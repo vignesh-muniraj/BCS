@@ -315,3 +315,15 @@ every website runs on 443 port
 - How to do. (children)
 # Declarative
 - what to do.
+
+
+
+#     <!-- !important  > Inline > ID > ( class > Element ) Inhertiated properties ==> use these-->
+
+# Not Inherited
+- border
+- margin
+- height
+- width
+- background 
+
