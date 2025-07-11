@@ -14,8 +14,9 @@
     <style>
       :root {
         --primary-font-: "Inter";
-        --secondary-ft-clr:rgba(0, 0, 0, 0.308);
-        --primary-bt-clr: rgb(255, 77, 0);
+        --secondary-ft-clr: hsla(240, 25%, 87%, 0.749);
+        --accent-ft-clr: hsl(240, 6%, 64%);
+        --primary-bt-clr: hsl(18, 100%, 50%);
       }
       header {
         display: flex;
@@ -30,11 +31,13 @@
       }
 
       header nav > ul {
-        list-style: none;
-        display: flex;
-        gap: 16px;
-        padding: 0px;
-        li > a {
+          font-family: var(--primary-font-);
+          list-style: none;
+          display: flex;
+          gap: 16px;
+          padding: 0px;
+          li > a {
+            color: black;
           text-decoration: none;
         }
       }
@@ -48,14 +51,6 @@
         gap: 20px;
         max-width: 1400px;
         margin: 0px auto;
-
-        .bright h1 {
-          font-family: var(--primary-font-);
-          font-size: 50px;
-          font-weight: 400px;
-          line-height: 50px;
-          color: rgb(28, 32, 34);
-        }
       }
       .image1 {
         width: 900px;
@@ -65,21 +60,32 @@
         background-color: black;
         color: aliceblue;
         padding: 20px;
-        h1{
-            color: rgb(255, 170, 0);
+        h1 {
+          color: rgb(255, 170, 0);
+        }
+        p {
+          color: var(--secondary-ft-clr);
         }
       }
       .column-1 {
         .bright {
-          padding-left: 50px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          p {
+            line-height: 25px;
+            color: var(--accent-ft-clr);
+          }
+          .content {
+            padding: 20px;
+          }
         }
       }
-      .bright {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        p {
-          line-height: 25px;
-        }
+      .bright h1 {
+        font-family: var(--primary-font-);
+        font-weight: bolder;
+        font-size: 60px;
+        line-height: 55px;
+        color: rgb(28, 32, 34);
       }
       button {
         background-color: var(--primary-bt-clr);
@@ -92,16 +98,23 @@
       .spec {
         display: flex;
         gap: 5px;
+        font-family: var(--primary-font-);
         img {
           width: 90px;
           height: 130px;
           object-fit: cover;
         }
+        p {
+          color: var(--accent-ft-clr);
+        }
+        h2 {
+          color: var(--primary-bt-clr);
+        }
       }
       .base-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-    
+        padding-top: 30px;
         max-width: 1400px;
         margin: 0 auto;
         justify-content: center;
@@ -114,9 +127,10 @@
       <nav>
         <ul>
           <li><a href="">Home</a></li>
-          <li><a href="">Service</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">About US</a></li>
+          <li><a href="">New</a></li>
+          <li><a href="">Popular</a></li>
+          <li><a href="">Trending</a></li>
+          <li><a href="">Categories</a></li>
         </ul>
       </nav>
     </header>
@@ -144,17 +158,17 @@
         <h1>New</h1>
         <h2>Hydrogen VS Electric Cars</h2>
         <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-        <br>
+        <br />
         <hr />
-        <br>
+        <br />
         <h2>The Downsides of AI Artistry</h2>
         <p>
           What are the possible adverse effects of on-demand AI image
           generation?
         </p>
-        <br>
+        <br />
         <hr />
-        <br>
+        <br />
         <h2>Is VC Funding Drying Up?</h2>
         <p>
           Private funding by VC firms is down 50% YOY. We take a look at what
