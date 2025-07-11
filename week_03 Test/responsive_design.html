@@ -31,13 +31,13 @@
       }
 
       header nav > ul {
-          font-family: var(--primary-font-);
-          list-style: none;
-          display: flex;
-          gap: 16px;
-          padding: 0px;
-          li > a {
-            color: black;
+        font-family: var(--primary-font-);
+        list-style: none;
+        display: flex;
+        gap: 16px;
+        padding: 0px;
+        li > a {
+          color: black;
           text-decoration: none;
         }
       }
@@ -55,18 +55,7 @@
       .image1 {
         width: 900px;
       }
-      .column-2 {
-        font-family: var(--primary-font-);
-        background-color: black;
-        color: aliceblue;
-        padding: 20px;
-        h1 {
-          color: rgb(255, 170, 0);
-        }
-        p {
-          color: var(--secondary-ft-clr);
-        }
-      }
+    
       .column-1 {
         .bright {
           display: grid;
@@ -87,6 +76,18 @@
         line-height: 55px;
         color: rgb(28, 32, 34);
       }
+        .column-2 {
+        font-family: var(--primary-font-);
+        background-color: black;
+        color: aliceblue;
+        padding: 20px;
+        h1 {
+          color: rgb(255, 170, 0);
+        }
+        p {
+          color: var(--secondary-ft-clr);
+        }
+      }
       button {
         background-color: var(--primary-bt-clr);
         border: none;
@@ -95,13 +96,22 @@
         width: 100px;
         font-weight: bold;
       }
+      .base-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        display: flex;
+        padding-top: 30px;
+        max-width: 1400px;
+        margin: 0 auto;
+        justify-content: center;
+      }
       .spec {
         display: flex;
-        gap: 5px;
+        gap: 10px;
         font-family: var(--primary-font-);
         img {
-          width: 90px;
-          height: 130px;
+          width: 100px;
+          height: 150px;
           object-fit: cover;
         }
         p {
@@ -111,14 +121,11 @@
           color: var(--primary-bt-clr);
         }
       }
-      .base-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding-top: 30px;
-        max-width: 1400px;
-        margin: 0 auto;
-        justify-content: center;
+        /* @media (min-width: 300px){
+        .image1 {
+        width: 450px;
       }
+        } */
     </style>
   </head>
   <body>
