@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        
-        header {
+   
+      header {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
         max-width: 900px;
         margin: 0px auto;
-
         > img {
-        justify-content: left;
           height: 40px;
         }
-
-        button {
-          border-radius: 80px;
-          color: var(--secondary-text-clr);
-          background-color: var(--primary-clr);
-          border: none;
-          padding: 8px 12px;
-        }
       }
+
       header nav > ul {
         list-style: none;
         display: flex;
         gap: 16px;
         padding: 0px;
-        font-family: var(--ff-primary);
-
         li > a {
           text-decoration: none;
-          color: var(--primary-text-clr);
-
+         
         }
-    }
+      }
+      body {
+        /* min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-content: center; */
+        max-width: 900px;
+        margin: 0px auto;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+      }
     </style>
-</head>
-<body>
-   <header>
-    <img src="news-homepage-main/assets/images/logo.svg" alt="">
-    <nav>
+  </head>
+  <body>
+    <header>
+      <img src="news-homepage-main/assets/images/logo.svg" alt="logo" />
+      <nav>
         <ul>
           <li><a href="">Home</a></li>
           <li><a href="">Service</a></li>
@@ -52,6 +59,26 @@
           <li><a href="">About US</a></li>
         </ul>
       </nav>
-   </header>
-</body>
+    </header>
+    <div class="container">
+      <div class="image">
+        <img
+          src="news-homepage-main/assets/images/image-web-3-desktop.jpg"
+          alt=""
+        />
+        <div class="bright">
+          <h1>The Bright Future of Web 3.0?</h1>
+          <div class="content">
+           <p>
+            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
+           </p>
+           <button>READ MORE</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        2
+      </div>
+    </div>
+  </body>
 </html>
