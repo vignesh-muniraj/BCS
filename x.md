@@ -354,4 +354,24 @@ every website runs on 443 port
     1.DX
     2.SEO
     3.Accessibility
+
+  # object-fit: cover;
+
+  ## DAY 16
     
+# overflow: hidden;
+- hidden
+- scroll
+- auto (which side want to scroll)
+
+
+# Grid
+- grid-template-columns: 1fr 1fr;
+- grid-template-columns: repeat(10, 1fr);
+- grid-template-columns: repeat(10, 1fr);
+- grid-template-columns: 4fr repeat(2, 1fr);
+- grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+
+# Ram technic
+-Repeat Autofit MinMax.
+

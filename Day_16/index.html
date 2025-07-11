@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Horizontal Scroll Example</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .container {
+      width: 300px;
+      overflow-x: auto;
+      white-space: nowrap;
+      /* flex-wrap: nowrap; */
+      border: 2px solid #ccc;
+      padding: 10px;
+    }
+
+    .item {
+      display: inline-block;
+      width: 150px;
+      height: 100px;
+      background: lightblue;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Horizontal Scroll using Overflow</h2>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+
+</body>
+</html>
