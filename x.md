@@ -304,7 +304,7 @@ every website runs on 443 port
 # Day 13
 - css - casecading - overriding
 # Day_14
- # 
+ # combinators
 - child selector. div>p
 - Descendant Selector. div p
 - General Sibiling Selector. h1~p (h1 sister,brother)(after h1,only Younger sibilings)
@@ -317,7 +317,7 @@ every website runs on 443 port
 - what to do.
 
 
-
+# selectors
 #     <!-- !important  > Inline > ID > ( class > Element ) Inhertiated properties ==> use these-->
 
 # Not Inherited
@@ -327,3 +327,31 @@ every website runs on 443 port
 - width
 - background 
 
+
+
+# Pseudo class
+- :hover
+- :nth-child(2);
+- li:first-child();
+- li:first-Of-type()
+
+# Pseudo element
+- ::after
+- ::before
+- li::before{
+  content :"✔ ";
+}
+
+- li::before{
+  content :"✔ ";
+
+}
+
+# Semantic Elements 
+# EXample
+    <header></header>
+    <footer></footer>
+    1.DX
+    2.SEO
+    3.Accessibility
+    

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="script.css"> -->
+    <style>
+      img {
+        height: 40px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 900px;
+        margin: 0 auto;
+        
+        button{
+        background-color: hsl(243, 93%, 65%);
+        height: 33px;
+        width: 80px;
+        color: white;
+        border-radius: 50px;
+        border: 0px;
+        padding: 2px 2px;
+    
+        &:hover{
+            background-color: blue;
+        }
+    }
+      }
+    header  nav > ul{
+          display: flex;
+          gap: 30px;
+          list-style: none;
+          padding: 0;
+          
+
+       li > a {
+        text-decoration: none;
+        font-size: larger;
+        color: black;
+
+        &:hover{
+            color:  hsl(243, 93%, 65%);
+        }
+       }
+       
+      }
+    
+    </style>
+  </head>
+  <body>
+    <!-- 
+    Semantic Elements (header)
+    1.DX
+    2.SEO
+    3.Accessibility
+     -->
+    <header>
+      <img src="BCS-Logo_Blue.png" alt="BCS_LOGO" />
+      <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Service</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">About us</a></li>
+        </ul>
+    </nav>
+    <button>Get started</button>
+    </header>
+  </body>
+</html>

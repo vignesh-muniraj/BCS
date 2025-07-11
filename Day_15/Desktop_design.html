@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.google.com/specimen/Inter" rel="stylesheet" />
+    <style>
+      :root {
+        --primary-bg-clr: hsl(232.94deg 45.95% 7.25%);
+        --secondary-bg-clr: hsl(245.81deg 38.27% 15.88%);
+        --primary-ft-clr: hsl(0deg 0% 99.8%);
+        --secondary-ft-clr: hsl(245.22deg 11.56% 60.98%);
+        --accent-ft-clr: hsl(276.2deg 62.69% 62.16%);
+      }
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-content: center;
+        background-color: var(--primary-bg-clr);
+      }
+      .container {
+        display: flex;
+        /* justify-content: center;
+        align-items: center; */
+        max-width: 1000px;
+        margin: 0 auto;
+        font-family: Lexend Deca;
+        
+        
+     li{
+          list-style: none;
+          line-height: 10px;
+          
+        }
+        ul{
+            padding-left: 0px;
+            padding-right: 30px;
+        }
+    }
+    img {
+    width: 100%;
+    border-radius:0px 20px 20px 0px; 
+    /* mix-blend-mode: difference;    */
+      mix-blend-mode: luminosity;
+  }
+      
+      span {
+        color: var(--accent-ft-clr);
+      }
+      h1,h2{
+        color: var(--primary-ft-clr);
+        font-weight: 700;
+        font-weight: 400px;
+      }
+      h2{
+        font-size: 18px;
+      }
+      p,li{
+        color: var(--secondary-ft-clr);
+      }
+      .box2 {
+        display: flex;
+        padding: 0px;
+    }
+    .box1{
+          background-color: var(--secondary-bg-clr);
+        justify-content: center;
+        align-items: center;
+        padding:45px;
+        border-radius:20px 0px 0px 20px;
+    }
+    /* .box1,.box3 {
+        flex: 1;
+      } */
+    
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">
+        <h1>Get <span>insights</span> that help your business grow.</h1>
+        <p>
+          Discover the benefits of data analytics and make better decisions
+          regarding revenue, customer experience, and overall efficiency.
+        </p>
+        <div class="box2">
+          <ul>
+            <li><h2>10+</h2></li>
+            <li><p>COMPANIES</p></li>
+          </ul>
+          <ul>
+            <li><h2>314</h2></li>
+            <li>TEMPLATES</li>
+          </ul>
+          <ul>
+            <li><h2>12M+</h2></li>
+            <li>QURIES</li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="box3">  -->
+        <img src="image-header-desktop.jpg" alt="" />
+       <!-- </div> -->
+    </div>
+  </body>
+</html>
