@@ -1,5 +1,11 @@
 # Day 1 - Intro
 
+
+### Day_17 
+# Advance js
+
+
+
 ## intro to browser
 
 ### what language does the browser understand
@@ -375,3 +381,39 @@ every website runs on 443 port
 # Ram technic
 -Repeat Autofit MinMax.
 
+
+# positon
+- top - 50%
+- left - 50%
+- transform: translateY(-50%)
+- transform: translateX(-50%)
+
+- static - normal.
+- Realtive - good theif.
+- Absolute - bad theif.
+- fixed - 
+- Sticky - static + Absolute (hybrid).
+
+# Border-sizing: border-box;
+
+
+# Picture Element
+
+
+
+# Day_18
+
+# HTML collection 
+- document.getElementByClassName()
+- document.getElementBytagName()
+- length
+
+# NodeList
+- document.querySelectorAll()
+- ForEach, length
+
+# Array Conversion
+- `Array.from()`
+- Spread 
+
+# XSS (attack)

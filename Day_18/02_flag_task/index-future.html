@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Your code */
+      :root {
+        --ff-primary: Roboto, sans-serif;
+      }
+
+      body {
+        background: whitesmoke;
+
+        display: grid;
+        /* RAM */
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 24px;
+      }
+
+      .country-container {
+        background: white;
+        width: 300px;
+        font-family: var(--ff-primary);
+        border-radius: 16px;
+        overflow: hidden;
+
+        > img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+
+        .country-content-container {
+          padding: 0px 16px 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <img class src="" alt=""> -->
+    <script>
+      // Your JS
+
+      function createCountry(country) {
+        document.body.innerHTML += `
+        <div class="country-container">
+          <img src="${country.flag}" />
+          <div class="country-content-container">
+            <h3>${country.name}</h3>
+            <p><strong>Population:</strong> ${country.population}</p>
+            <p><strong>Region:</strong> ${country.region}</p>
+            <p><strong>Capital:</strong> ${country.capital}</p>
+          </div>
+        </div>
+        `;
+      }
+
+      fetch(
+        "https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital"
+      )
+        .then((res) => res.json())
+        .then((countries) => {
+          countries.forEach((country) => {
+            const modifiedCountry = {
+              ...country,
+              name: country.name.common,
+              capital: country.capital[0],
+              flag: country.flags?.svg ?? country.flags?.png,
+            };
+
+            createCountry(modifiedCountry);
+          });
+        });
+    </script>
+  </body>
+</html>

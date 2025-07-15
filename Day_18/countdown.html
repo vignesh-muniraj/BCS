@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="display"></h1>
+    <img class="image" src="" alt="" />
+    <script>
+      const display = document.querySelector(".display");
+      const img = document.querySelector(".image");
+      //  document.querySelector(".display");
+
+      let Index = 10;
+      setTimeout(() => {
+        document.querySelector(".display").innerHTML = Index--;
+        // display.innerHTML = Index--;
+        setTimeout(() => {
+          document.querySelector(".display").innerHTML = Index--;
+          //   display.innerHTML = Index--;
+          setTimeout(() => {
+            setTimeout(() => {
+              display.innerHTML = Index--;
+              setTimeout(() => {
+                display.innerHTML = Index--;
+                setTimeout(() => {
+                  display.innerHTML = Index--;
+                  setTimeout(() => {
+                    display.innerHTML = Index--;
+                    setTimeout(() => {
+                      display.innerHTML = Index--;
+                      setTimeout(() => {
+                        display.innerHTML = Index--;
+                        setTimeout(() => {
+                          display.innerHTML = Index--;
+                          setTimeout(() => {
+                            display.innerHTML = Index--;
+                            setTimeout(() => {
+                              img.src =
+                                "https://www.crossed-flag-pins.com/animated-flag-gif/gifs/India_240-animated-flag-gifs.gif";
+                            }, 1000);
+                          }, 1000);
+                        }, 1000);
+                      }, 1000);
+                    }, 1000);
+                  }, 1000);
+                }, 1000);
+              }, 1000);
+            }, 1000);
+          }, 1000);
+        }, 1000);
+      }, 1000);
+    </script>
+  </body>
+</html>

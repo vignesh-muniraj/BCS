@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Your code */
+      :root {
+        --ff-primary: Roboto, sans-serif;
+      }
+
+      body {
+        background: whitesmoke;
+      }
+
+      .country-container {
+        background: white;
+        width: 300px;
+        font-family: var(--ff-primary);
+        border-radius: 16px;
+        overflow: hidden;
+
+        > img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+
+        .country-content-container {
+          padding: 0px 16px 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <img class src="" alt=""> -->
+    <script>
+      // Your JS
+      const country = {
+        name: "India",
+        population: " 1,394,975,829",
+        region: "Asia",
+        flag: "https://upload.wikimedia.org/wikipedia/commons/7/7b/India_flag_300.png",
+        capital: "New delhi",
+      };
+
+      const countryContainer = document.createElement("div");
+      countryContainer.setAttribute("class", "country-container");
+
+      countryContainer.innerHTML = `
+      <img src="${country.flag}" />
+      <div class="country-content-container">
+        <h3>${country.name}</h3>
+        <p><strong>Population:</strong> ${country.population}</p>
+        <p><strong>Region:</strong> ${country.region}</p>
+        <p><strong>Capital:</strong> ${country.capital}</p>
+      </div>
+      `;
+
+      document.body.append(countryContainer);
+    </script>
+  </body>
+</html>

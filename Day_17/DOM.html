@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Waiting for next Spider-man Homecoming</h1>
+    <h1>Superman movie was Meh!!</h1>
+    <div class="container"> </div>
+  
+        <ul class="hobby-list"></ul>
+    
+
+    <script>
+      console.log(document);
+      //   Accessing DOM via JS
+      const reviews = document.getElementsByTagName("h1");
+
+      //   Read
+      console.log(reviews); // HTML Collection
+      console.log(reviews[0].innerText);
+      console.log(reviews[1].innerText);
+
+      //   Update
+      //   task 1.1
+      reviews[0].innerText = reviews[0].innerText.toUpperCase();
+
+      // task 1.2
+      reviews[0].innerText =
+        reviews[0].innerText.toUpperCase().split(" ").join("!!  ") + "!!";
+
+         //   Adding an <p> to div.container
+
+      // Create
+      const para1 = document.createElement("p");
+      para1.innerText = "Make hay while the sun shines";
+      //   document.body.append(para1);
+      const quoteContainer = document.querySelector(".container");
+      quoteContainer.append(para1);
+
+      //Task 2.1
+
+      const hobbies = [
+        "📚 Reading",
+        "🎨 Painting",
+        "📸 Photography",
+        "🥾 Hiking",
+        "🌱 Gardening",
+        "👨‍🍳 Cooking",
+        "🎶 Playing musical instruments",
+        "💃 Dancing",
+        "✈️ Traveling",
+        "🧶 Knitting",
+      ];
+       
+    for(let hobbie of hobbies){
+      var list = document.createElement('li');
+      list.innerText = hobbie;  
+
+      // const location = document.querySelector('.hobby-list');
+      //  location.append(list);
+      document.querySelector('.hobby-list').append(list);
+    }
+     
+      
+    </script>
+  </body>
+</html>

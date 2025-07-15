@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .social-media {
+        font-family: Roboto, sans-serif;
+        /* Size and Color of SVG */
+        font-size: 42px;
+        color: purple;
+      }
+
+      body {
+        font-family: Roboto;
+
+        margin: 0;
+        display: grid;
+        place-content: center;
+        /* 1vh -> 1% of screen height */
+        min-height: 100vh;
+      }
+
+      .hobbies {
+        position: relative;
+        margin: 0;
+        font-size: 28px;
+        list-style: none;
+      }
+
+      .hobbies > li:nth-child(1) {
+        background-color: crimson;
+      }
+
+      .hobbies > li:nth-child(2) {
+        background-color: palevioletred;
+      }
+
+      .hobbies > li:nth-child(3) {
+        /* top: 10px;
+        left: 10px;
+        position: relative; */
+        background-color: plum;
+      }
+
+      .hobbies > li:nth-child(4) {
+        top: 0px;
+        /* position: absolute; */
+        background-color: purple;
+      }
+
+      .hobbies > li:nth-child(5) {
+        background-color: orange;
+      }
+
+      /* .hobbies > li:nth-child(odd) {
+        color: crimson;
+      }
+
+      .hobbies > li:nth-child(even) {
+        color: orange;
+      } */
+
+      .amazing {
+        position: fixed;
+        background: orange;
+        bottom: 0px;
+        width: 400px;
+        margin: 0;
+
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      nav > .hobbies {
+        display: flex;
+      }
+
+      nav {
+        top: 10px;
+        /* static + fixed */
+        position: sticky;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <p class="social-media">
+      <i class="fa-brands fa-square-instagram"></i> Instagram
+    </p> -->
+
+    <!-- <h2>Hobbies</h2> -->
+
+    <ul class="hobbies">
+      <li><i class="fa-solid fa-utensils"></i> Cooking</li>
+      <li><i class="fa-brands fa-pagelines"></i> Gardening</li>
+      <li><i class="fa-solid fa-paintbrush"></i> Painting</li>
+      <li><i class="fa-solid fa-tv"></i> Watching TV</li>
+      <li><i class="fa-solid fa-table-tennis-paddle-ball"></i> Table Tennis</li>
+    </ul>
+
+    

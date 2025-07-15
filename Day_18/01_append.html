@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #quote {
+        color: pini;
+      }
+
+      .container > h1 {
+        color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Hobbies</h2>
+    <ul class="hobbies-container"></ul>
+
+    <script>
+      const hobbies = [
+        "📚 Reading",
+        "🎨 Painting",
+        "📸 Photography",
+        "🥾 Hiking",
+        "🌱 Gardening",
+        "👨‍🍳 Cooking",
+        "🎶 Playing musical instruments",
+        "💃 Dancing",
+        "✈️ Traveling",
+        "🧶 Knitting",
+      ];
+
+      // hobbies.forEach((hobby) => {
+      //   const item = document.createElement("li");
+      //   item.innerText = hobby;
+
+      //   document.querySelector(".hobbies-container").append(item);
+      // });
+
+      //    hobbies.forEach((hobby) => {
+      //   const item = document.createElement("li");
+      //   item.innerText = hobby;
+
+      //   document.querySelector(".hobbies-container").append(item);
+      // });
+
+      // x = 2
+      // x = x + 4;
+      // x += 4;
+
+      // XSS - Attack - Assignment
+      hobbies.forEach((hobby) => {
+        document.querySelector(
+          ".hobbies-container"
+        ).innerHTML += `<li>${hobby}</li>`;
+      });
+    </script>
+  </body>
+</html>

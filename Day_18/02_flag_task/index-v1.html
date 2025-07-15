@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Your code */
+      .country-container {
+        background: pink;
+        width: 300px;
+
+        > img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <img class src="" alt=""> -->
+    <script>
+      // Your JS
+      const country = {
+        name: "India",
+        population: " 1,394,975,829",
+        region: "Asia",
+        flag: "https://upload.wikimedia.org/wikipedia/commons/7/7b/India_flag_300.png",
+        capital: "New delhi",
+      };
+
+      const countryContainer = document.createElement("div");
+
+      const countryName = document.createElement("h3");
+      countryName.innerText = country.name;
+
+      const countryPopulation = document.createElement("p");
+      countryPopulation.innerText = `Population: ${country.population}`;
+
+      const countryRegion = document.createElement("p");
+      countryRegion.innerText = `Region: ${country.region}`;
+
+      const countryCapital = document.createElement("p");
+      countryCapital.innerText = `Capital: ${country.capital}`;
+
+      const countryFlag = document.createElement("img");
+      countryFlag.setAttribute("src", country.flag);
+
+      countryContainer.setAttribute("class", "country-container");
+
+      countryContainer.append(countryFlag);
+      countryContainer.append(countryName);
+      countryContainer.append(countryPopulation);
+      countryContainer.append(countryRegion);
+      countryContainer.append(countryCapital);
+      document.body.append(countryContainer);
+    </script>
+  </body>
+</html>
