@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function boilStep(step, fun) {
+        const delay = Math.floor(Math.random() * 2000);
+        setTimeout(() => {
+          console.log(`✅ ${step} done in ${delay}ms`);
+          fun();
+        }, delay);
+      }
+
+      console.log("👨‍🍳 Starting to boil an egg...\n");
+      // These fire simultaneously — order is random!
+      boilStep("1️⃣ Filling pot with water 💧", () => {
+        boilStep("2️⃣ Boiling the water 🔥", () => {
+          boilStep("3️⃣ Dropping in the egg and cooking 🥚", () => {
+            console.log("End");
+          });
+        });
+      });
+      //   boilStep("2️⃣ Boiling the water 🔥");
+      //   boilStep("3️⃣ Dropping in the egg and cooking 🥚");
+    </script>
+  </body>
+</html>

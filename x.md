@@ -417,3 +417,31 @@ every website runs on 443 port
 - Spread 
 
 # XSS (attack)
+
+
+## Day_19
+- Event loop (AJS)
+# callback
+- When a function takes an another  function as argument.
+- Argument is callback function.
+
+# Asynchronous
+- js is single thread and asynchronous.
+
+
+
+
+# core
+- processor
+- thread
+
+
+# Promise
+- Pending
+- fulfill
+- Reject
+
+# Promise methods
+- 1 then
+- 2 catch
+- 3 finally
