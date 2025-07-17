@@ -445,3 +445,29 @@ every website runs on 443 port
 - 1 then
 - 2 catch
 - 3 finally
+
+
+
+
+# mobile app - kotlin
+# ios - swif
+#
+
+
+# Api
+- Loose coupling
+- FE <-> BE (many-to-many)
+- cross platform
+- micro service (multiple backends -> netflix)
+
+# 3layer Architecture
+- front-end
+- Database
+- Back-end
+
+# Rest Api endpoint
+
+
+
+
+### Prority Queue (promise will go in special queue)
