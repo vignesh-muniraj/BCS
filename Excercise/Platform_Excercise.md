@@ -58,7 +58,41 @@ console.log(getTheme(settings2));
 console.log(getTheme(settings3));
 console.log(getTheme(settings4));
 ```
+## Excepted output
+dark
+light
+light
+light
+## Excercise 5
 
+### Answer
+```js
+const userData = {
+  user: {
+    profile: {
+      name: "Alice",
+      age: null,
+    },
+  },
+};
+
+const userWithAge = { user: { profile: { age: 25 } } };
+const userWithoutProfile = { user: {} };
+
+const getUserAge = (data) => {
+  return data?.user?.profile?.age ?? "Age not provided";
+  
+};
+
+console.log(getUserAge(userData));
+console.log(getUserAge(userWithAge));
+console.log(getUserAge(userWithoutProfile));
+
+```
+### Expected Output:
+Age not provided
+25
+Age not provided
 ## Excercise 6
 Calculate the total price of all products in your cart using arrow functions and array methods.
 ### Answer 
@@ -135,7 +169,24 @@ console.log(extractPersonInfo(person));
 ### Expected Output
 
 Alice is 30 years old.
+## Excercise 10
 
+## Answer
+```js
+const colors = ["red", "green", "blue", "yellow"];
+const coordinates = [10, 20];
+
+
+const getFirstTwoColors = (colors) => {
+  const[first,second] = colors;
+  return `First: ${first}, Second: ${second}`;
+};
+
+console.log(getFirstTwoColors(colors));
+```
+
+Expected Output:
+First: red, Second: green
 
 # Excercise 11
 
@@ -181,6 +232,71 @@ console.log(getUserSettings(userWithoutSettings));
 Eve prefers the dark theme
 Adam prefers the light theme
 
+ # Excercise 13
+ ```js
+ const employees = [
+  {
+    id: 1,
+    name: "Alice",
+    position: "Developer",
+    skills: ["JavaScript", "React"],
+  },
+  {
+    id: 2,
+    name: "Bob",
+    position: "Manager",
+    skills: ["Leadership", "Communication"],
+  },
+  { 
+    id: 3, 
+    name: "Charlie", 
+    position: "CEO", 
+    skills: ["Strategy", "Vision"] 
+  },
+];
+const addSkill = (employees, newSkill) => {
+  return employees
+    .map((employee) => ({...employee, skills:[...employee.skills,newSkill]}));
+};
+
+console.log(JSON.stringify(addSkill(employees, "Problem Solving"), null, 2));
+ ```
+ ###  Expected Output:
+ ```js
+
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "position": "Developer",
+    "skills": [
+      "JavaScript",
+      "React",
+      "Problem Solving"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "position": "Manager",
+    "skills": [
+      "Leadership",
+      "Communication",
+      "Problem Solving"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Charlie",
+    "position": "CEO",
+    "skills": [
+      "Strategy",
+      "Vision",
+      "Problem Solving"
+    ]
+  }
+]
+ ```
  # Excercise 15
 
 Transform an array of numbers by doubling each value using the map method. 
@@ -316,7 +432,7 @@ Baahubali is an Action movie
 Jersey is a Sports movie
 Movie not found
 
-# Exercise
+# Exercise 20
 Write a function that filters movies released after a certain year and calculates their average rating.
 ### Answer
 ```js
@@ -600,6 +716,35 @@ console.log(JSON.stringify(getTitlesByDirectorSortedByYear(movies, "Nag Ashwin")
 ["Eega","Baahubali"]
 ["Mahanati"]
 
+
+# Exercise 30
+
+## Answer
+```js
+const movies = [
+  { id: 1, title: "Baahubali", year: 2015, ratings: [8, 9, 10] },
+  { id: 2, title: "Arjun Reddy", year: 2017, ratings: [9, 8, 9] },
+  { id: 3, title: "Mahanati", year: 2018, ratings: [10, 9, 8] },
+  { id: 4, title: "Eega", year: 2012, ratings: [7, 8, 9] },
+  { id: 5, title: "Jersey", year: 2019, ratings: [9, 9, 8] },
+];
+
+const getAverageRatingByYear = (movies, year) => {
+const filteredYear = movies.filter((movie)=> movie.year == year)
+if(filteredYear.length==0){
+    return "no movie"
+}
+    const redc = filteredYear.map(movie => movie.ratings.reduce((acc,crr
+) => acc + crr,0))
+const res = redc /  3;
+return res.toFixed(2);
+};
+console.log(getAverageRatingByYear(movies, 2018));
+console.log(getAverageRatingByYear(movies, 2020));
+```
+## Expected Output:
+9.00
+No movies released in the specified year
 # Exercise 31
 ### Answer
 ```js

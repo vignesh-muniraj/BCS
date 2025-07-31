@@ -1,0 +1,145 @@
+let currentPageNo = 1;
+// currentPageNo - 5
+// goto 4th page  currentPageNo - 2
+function prevPage() {
+  const paginationButtons = document.querySelectorAll(".pagination > button");
+  console.log(paginationButtons[currentPageNo - 2]);
+  paginationButtons[currentPageNo - 2].click();
+  console.log(paginationButtons);
+}
+
+function nextPage() {
+  const paginationButtons = document.querySelectorAll(".pagination > button");
+  console.log(currentPageNo);
+  paginationButtons[currentPageNo].click();
+  console.log(paginationButtons);
+}
+
+function updateNoPages() {}
+
+const displayEachPageUsers = (noOfUserPerPage, users, pageNo) => {
+  const eachPageUsers = users.slice(
+    (pageNo - 1) * noOfUserPerPage,
+    pageNo * noOfUserPerPage
+  );
+  // clear the previous page & then load the new page
+  document.querySelector(".user-list").innerHTML = "";
+  currentPageNo = pageNo;
+  eachPageUsers.forEach((user) => loadUser(user));
+};
+
+function getUsers() {
+  // Clear the old data
+  document.querySelector(".user-list").innerHTML = "";
+  fetch("https://60c98aa8772a760017203b57.mockapi.io/users", { method: "GET" })
+    .then((data) => data.json())
+    .then((users) => {
+      // No of pages
+      const noOfUserPerPage = 5;
+      const noOfpages = Math.ceil(users.length / noOfUserPerPage);
+      const pagination = document.querySelector(".pagination");
+      // displayTenUsers(noOfUserPerPage, users);
+      displayEachPageUsers(noOfUserPerPage, users, 1);
+      // for loop get the 6 button
+      for (let pageNo = 1; pageNo <= noOfpages; pageNo++) {
+        const page = document.createElement("button");
+        page.innerText = pageNo;
+        pagination.append(page);
+        page.onclick = () =>
+          displayEachPageUsers(noOfUserPerPage, users, pageNo);
+      }
+    });
+}
+// old data + new data
+function loadUser({ username: name, avatar, createdAt, id }) {
+  // console.log(user);
+
+  document.querySelector(".user-list").innerHTML += `
+  <div class="user-container">
+    <img src=${avatar} alt=${name}>
+    <div class="user-details">
+      <p class="user-name">${name}</p>
+      <p class="user-joined">${new Date(createdAt).toDateString()}</p>
+      <button class="user-delete" onclick="deleteUser(${id})">Delete</button>
+       <button class="user-edit" onclick="showEditForm(${id})">Edit</button>
+       <div class="edit-user-form edit-user-form-${id}">
+        <input value="${name}" class="edit-user-name-${id}" placeholder="Enter username" />
+        <input value="${avatar}" class="edit-user-profile-${id}" placeholder="Enter profile pic" />
+        <button onclick="editUser(${id})">Save</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function showEditForm(id) {
+  document.querySelector(`.edit-user-form-${id}`).style.display = "flex";
+}
+
+function editUser(id) {
+  const name = document.querySelector(`.edit-user-name-${id}`).value;
+  const avatar = document.querySelector(`.edit-user-profile-${id}`).value;
+  console.log(name, avatar);
+  fetch(`https://60c98aa8772a760017203b57.mockapi.io/users/${id}`, {
+    method: "PUT",
+    body: JSON.stringify({ name: name, avatar: avatar }),
+    headers: { "Content-Type": "application/json" }
+  })
+    .then((data) => data.json())
+    // Edit -> Refresh the data
+    .then((data) => getUsers());
+
+  document.querySelector(`.edit-user-form-${id}`).style.display = "none";
+}
+
+function deleteUser(id) {
+  console.log("deleting....", id);
+
+  fetch(`https://60c98aa8772a760017203b57.mockapi.io/users/${id}`, {
+    method: "DELETE"
+  })
+    .then((data) => data.json())
+    .then((data) => getUsers());
+  // Task delete a user, it should reflect in the user list
+  // getUsers();
+}
+
+getUsers();
+
+// Delete - takes some time   2s - Lorry
+//  getUsers - Get method return old data before deleteing - Ferrari
+
+// post
+
+function addUser() {
+  console.log("Addingg User....");
+  const name = document.querySelector(".add-user-name").value;
+  const avatar = document.querySelector(".add-user-profile").value;
+  console.log(name, avatar);
+  // 1. Use POST method
+  // 2. Provided in the body as JSON
+  // 3. Provide in the headers the data is JSON
+  fetch("https://60c98aa8772a760017203b57.mockapi.io/users", {
+    method: "POST",
+    body: JSON.stringify({ name: name, avatar: avatar }),
+    headers: { "Content-Type": "application/json" }
+  })
+    .then((data) => data.json())
+    // After adding user -> refresh
+    .then((data) => getUsers());
+}
+
+// After adding user -> refresh
+
+// Edit User
+
+// Put - delete & Post
+
+// Pagination
+
+// console.log(i, eachPageUsers);
+
+// i = 1 -> 0 - 9 th index user (i-1)*10 -> 0           (i*10 - 1) -> 9  index < 10  index <= 9
+// i = 2 -> 10 - 19 the index  (i-1)*10  -> 10          (i*10 - 1) -> 19
+// i = 3 -> 20 - 29 the index  (i-1)*10   -> 20         (i*10 - 1) -> 29
+
+// value > i
