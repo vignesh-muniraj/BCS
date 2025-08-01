@@ -482,3 +482,36 @@ every website runs on 443 port
 - react js
 - webpack + Babel (translator / compiler)
 - html, css, js
+
+
+
+```js
+import "./styles.css";
+
+export default function App() {
+  return (
+    <div className="App">
+      <h1>Hello,CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+    </div>
+  );
+}
+```
+// JSX -> JS
+
+-- Reserved Keyword
+-- class are Reserved Keyword in js so in react we give name  as c  lassName
+-- 1.class -> className
+-- 2.for -> htmlFor
+
+## Component Rules
+- 1.PascalCase
+- 2.return JSX
+- function Msg(){ ..  }
+
+## 
+- JSX rule - only one parent element
+- (<> </>) React fragments 
+
+# 
+
