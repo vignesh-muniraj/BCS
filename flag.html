@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+        margin: 0;
+        /* background-color: rgba(165, 222, 227, 0.511); */
+        background-color: white;
+      }
+      .image {
+        width: 400px;
+        height: 300px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      h1 {
+        font-size: 70px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .msg {
+        display: none;
+        /* place-content: center; * */
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        font-size: 40px;
+        .orange-clr {
+          color: orange;
+        }
+        .green-clr {
+          color: green;
+        }
+        .white-clr {
+          color: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="dis"></h1>
+    <div class="image"></div>
+    <div class="msg">
+      <span class="orange-clr"> Happy</span>
+      <span class="white-clr"> Independence </span
+      ><span class="green-clr">Day!</span>
+    </div>
+    <script>
+      let count = 10;
+      function boilEgg() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(count--);
+          }, 1000); // Wait for 3 seconds
+        });
+      }
+      async function makeBreakfast() {
+        for (let i = 1; i <= 11; i++) {
+          const egg = await boilEgg();
+          const h2 = document.querySelector(".dis");
+          const msg = document.querySelector(".msg");
+          if (egg == 0) {
+            //   h2.setAttribute("style","display: none");
+            h2.style.display = "none";
+            msg.style.display = "block";
+            document.querySelector(
+              ".image"
+            ).innerHTML = `<img src=${"https://cdn.pixabay.com/animation/2022/08/21/20/03/20-03-41-348_512.gif"}> </img>`;
+            document.body.style.background =
+              "linear-gradient(orange, white, green)";
+          } else {
+            // document.querySelector(".dis").innerText = egg;
+            h2.innerText = egg;
+          }
+          console.log(egg);
+        }
+      }
+
+      makeBreakfast();
+    </script>
+  </body>
+</html>
