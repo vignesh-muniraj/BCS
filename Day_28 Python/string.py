@@ -47,7 +47,7 @@ message = "   With great power comes great responsibility   "
 clean_message = message.strip()
 
 print(message)
-print(clean_message)
+print(clean_message)    
 
 coded_message = "********SO*S******"
 decoded = coded_message.strip("*")
