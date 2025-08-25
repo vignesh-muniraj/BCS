@@ -176,3 +176,47 @@ FROM north_american_cities
   DESC limit 2 offset 2 ;
 
 ```
+# Exercise 6 (join)s
+- Find the domestic and international sales for each movie
+```sql 
+select * 
+from movies inner join boxoffice on movies.id = boxoffice.movie_id;
+```
+- Show the sales numbers for each movie that did better internationally rather than domestically
+```sql
+select * from movies inner join boxoffice on movies.id = boxoffice.movie_id where domestic_sales < international_sales;
+```
+- List all the movies by their ratings in descending order
+
+```sql
+select * from movies inner join boxoffice on movies.id = boxoffice.movie_id order by rating desc;
+```
+
+# Exercise 7 
+
+- Find the list of all buildings that have employees
+```sql
+SELECT DISTINCT building FROM  employees;
+```
+- Find the list of all buildings and their capacity
+```sql
+SELECT DISTINCT * FROM  buildings;
+```
+- List all buildings and the distinct employee roles in each building (including empty buildings)
+```sql
+SELECT DISTINCT buildings.building_name,employees.role FROM  buildings  left join employees on buildings.building_name = employees.building;
+
+```
+
+# Exercise 8
+- Find the name and role of all employees who have not been assigned to a building
+```sql
+SELECT name, role FROM employees where building is null;
+
+```
+- Find the names of the buildings that hold no employees
+```sql
+SELECT  * from buildings left join employees on buildings.building_name = employees.building where building is  null;
+```
+# Exercise 9
+- 
