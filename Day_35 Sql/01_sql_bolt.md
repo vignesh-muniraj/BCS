@@ -102,7 +102,77 @@ WHERE title
 
 - List all directors of Pixar movies (alphabetically), without duplicates
 ```sql
-SELECT DISTINCT director FROM movies ORDER BY director;
-
+SELECT 
+DISTINCT 
+director 
+FROM movies 
+ORDER BY director;
+```
+- List the last four Pixar movies released (ordered from most recent to least) 
+```sql
+SELECT * 
+FROM movies
+ ORDER BY year 
+ DESC limit 4;
+```
+- List the first five Pixar movies sorted alphabetically
+```sql
+SELECT *
+ FROM movies 
+ ORDER BY title 
+ ASC LIMIT 5;
+```
+- List the next five Pixar movies sorted alphabetically
+```sql
+SELECT * 
+FROM movies 
+ORDER BY 
+title ASC LIMIT 5
+  OFFSET 5;
 ```
 
+
+# Review 1 — Tasks
+- List all the Canadian cities and their populations
+```sql
+SELECT city,
+population 
+FROM north_american_cities 
+WHERE country
+ LIKe 'Canada';
+```
+- Order all the cities in the United States by their latitude from north to south
+```sql
+SELECT *    
+ FROM north_american_cities 
+ WHERE country 
+ LIKE 'United States'
+ORDER BY latitude DESC;
+```
+- List all the cities west of Chicago, ordered from west to east
+```sql
+SELECT * 
+FROM north_american_cities
+WHERE longitude < 
+(SELECT longitude
+ FROM  north_american_cities 
+WHERE city = 'Chicago') 
+Order by longitude
+```
+- List the two largest cities in Mexico (by population) 
+```sql
+SELECT *
+ FROM north_american_cities 
+ where country ='Mexico' 
+ ORDER BY population 
+ DESC limit 2;
+```
+- List the third and fourth largest cities (by population) in the United States and their population 
+```sql
+SELECT * 
+FROM north_american_cities
+ where country = 'United States' 
+ ORDER BY population
+  DESC limit 2 offset 2 ;
+
+```
