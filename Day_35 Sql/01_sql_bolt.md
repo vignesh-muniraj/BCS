@@ -221,11 +221,11 @@ SELECT  * from buildings left join employees on buildings.building_name = employ
 # Exercise 9
 - List all movies and their combined sales in millions of dollars 
 ```sql
-SELECT title,(Domestic_sales + international_sales)/1000000 as millions FROM movies left join  boxoffice on id=movie_id;
+SELECT title,(Domestic_sales + international_sales)/1000000 as millions FROM movies inner join  boxoffice on id=movie_id;
 ```
 - List all movies and their ratings in percent
 ```sql
-SELECT title,round(100*rating)/10 as percent FROM movies left join  boxoffice on id=movie_id;
+SELECT title,rating*10 as percent FROM movies left join  boxoffice on id=movie_id;
 ```
 - List all movies that were released on even number years
 ```sql
@@ -235,6 +235,43 @@ SELECT title FROM movies left join  boxoffice on id=movie_id where year%2=0;
 # Exercise 10
 - Find the longest time that an employee has been at the studio
 ```sql
-SELECT *, max(	years_employed) FROM employees;
+SELECT *, max(years_employed) FROM employees;
 ```
-- 
+- For each role, find the average number of years employed by employees in that role
+```sql
+SELECT  role, avg(years_employed) as avgs FROM employees GROUP BY role ;
+
+```
+- Find the total number of employee years worked in each building 
+```sql
+select  *,sum(years_employed) as total from employees group by building;
+```
+# Exercise 11
+
+- Find the number of Artists in the studio (without a HAVING clause)
+```sql
+SELECT role, count(name)FROM employees where role='Artist' 
+```
+- Find the number of Employees of each role in the studio
+```sql
+SELECT role, count(name)FROM employees group by role 
+```
+- Find the total number of years employed by all Engineers
+```sql
+SELECT role, sum(years_employed)
+FROM employees where role like 'Engineer' group by role 
+```
+
+# Exercise 12
+- Find the number of movies each director has directed
+```sql
+select director, count(title) from movies group by director;
+```
+- Find the total domestic and international sales that can be attributed to each director
+```sql
+select director, sum(domestic_sales	+ international_sales) 
+from movies 
+inner join boxoffice
+ on movies.id = boxoffice.movie_id 
+ group by director;
+```
