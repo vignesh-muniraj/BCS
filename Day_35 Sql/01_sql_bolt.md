@@ -219,4 +219,22 @@ SELECT name, role FROM employees where building is null;
 SELECT  * from buildings left join employees on buildings.building_name = employees.building where building is  null;
 ```
 # Exercise 9
+- List all movies and their combined sales in millions of dollars 
+```sql
+SELECT title,(Domestic_sales + international_sales)/1000000 as millions FROM movies left join  boxoffice on id=movie_id;
+```
+- List all movies and their ratings in percent
+```sql
+SELECT title,round(100*rating)/10 as percent FROM movies left join  boxoffice on id=movie_id;
+```
+- List all movies that were released on even number years
+```sql
+SELECT title FROM movies left join  boxoffice on id=movie_id where year%2=0;
+```
+
+# Exercise 10
+- Find the longest time that an employee has been at the studio
+```sql
+SELECT *, max(	years_employed) FROM employees;
+```
 - 
